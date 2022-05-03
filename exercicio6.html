@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Exercício</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+        function calcularIMC() {
+        var altura = document.getElementById("altura").value;
+        var peso = document.getElementById("peso").value;
+        altura /= 100;
+        var imc = (peso / (altura * altura)).toFixed(2);
+        document.getElementById("resultadoIMC").innerHTML = "IMC: <strong>" +
+        imc + "</strong>";
+        }
+        </script>
+ </head>
+    <body>
+        <table width="467" ID = "alter" >
+            <tr>
+                <td id="one">IMC</td>
+                <td id="one">Categoria</td>
+            </tr>
+            <tr>
+                <td id = 'b'>Até 18,5</td>
+                <td id = 'b'>Abaixo do peso</td>
+            </tr>
+            <tr>
+                <td id = 'b'>De 18,5 até 24,9</td>
+                <td id = 'b'>Saudável</td>
+            </tr>
+            <tr>
+                <td id = 'b'>De 25,0 até 29,9</td>
+                <td id = 'b'>Sobrepeso</td>
+            </tr>
+            <tr>
+                <td id = 'b'>De 30,0 até 39,9</td>
+                <td id = 'b'>Obeso</td>
+            </tr>
+            <tr>
+                <td id = 'b'>Acima de 40</td>
+                <td id = 'b'>Alto risco de obesidade</td>
+            </tr>
+        </table>
+        <div id="abc"></div>
+        <label id= "one" for="altura">Altura (cm): </label>
+        <input id="altura" type="number" min="100" max="250"><br>
+         <label id= "two" for="peso">Peso (kg): </label>
+         <input id="peso" type="number" min="0" max="250"><br>
+         <a id="e" onclick="calcularIMC()">Calcular o IMC</a>
+         <div id="resultadoIMC"></div>
+         <a  id="a2" href="index.html" class="button">Voltar</a>
+         <h1>Exercício 06</h1>
+    </body>
+</html>

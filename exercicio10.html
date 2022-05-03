@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <title>JavaScript Exercício</title>
+    <script>
+    tabelaHTML = "<table id='tab'><tr><th id='a' colspan='50'> Números Primos entre 0 e 200<tr><td id='b'>1";
+    var primosEncontrados = 0;
+    for (dividendo = 2; dividendo <= 200; dividendo++) {
+    var ehPrimo = true;
+    for (divisor = 2; divisor < dividendo ; divisor++) {
+    if (dividendo % divisor == 0) {
+    ehPrimo = false;
+    tabelaHTML += "<td id = 'b'>" + dividendo;
+    break;
+    };
+    };
+    if (Boolean(ehPrimo)) {
+    tabelaHTML += "<td id ='b' bgcolor='#ff4dff'>" + dividendo;
+    primosEncontrados++;
+    }
+    dividendo % 20 == 0 ? tabelaHTML += "<tr>" : false;
+    };
+    tabelaHTML += "</table>";
+    document.write(tabelaHTML);
+    document.write('<h2 id="a">' + 'Primos encontrados: ' + primosEncontrados+ '</h2>');
+    </script>
+ </head>
+    <body>
+    <h1 id = 'a'>Exercício 10</h1>
+    <a id="ex10" href="Index.html" class="buttonA">Voltar</a>
+    </body>
+</html>
